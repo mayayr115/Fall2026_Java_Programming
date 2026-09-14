@@ -19,7 +19,7 @@ public class Artist {
 
     // Copy constructor (deep copy)
     public Artist(Artist anotherArtist) {
-        setInfo(anotherArtist.name, anotherArtist.numFans, anotherArtist.albums);
+        this(anotherArtist.name, anotherArtist.numFans, anotherArtist.albums);
     }
 
     // Method to set info , deep copy of albums array

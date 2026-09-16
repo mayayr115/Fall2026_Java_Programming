@@ -1,13 +1,16 @@
 package ICA.ICA03;
 
 public class Tailgater {
+  // static = entire class
   private static int drinksInCooler;
   private static int numberOfTailgaters;
+  // final = variables will NEVER CHANGE
   private final String name;
   private final boolean isBingFan;
   public int drinks;
 
   public Tailgater(String name, boolean isBingFan) {
+    // this keyword is ONLY for INSTANCES of a class object
     this.name = name;
     this.isBingFan = isBingFan;
     numberOfTailgaters += 1;
@@ -23,6 +26,7 @@ public class Tailgater {
     return this.name;
   }
 
+  // STATIC methods can only use STATIC variables
   public static int getNumberOfTailgaters() {
     return Tailgater.numberOfTailgaters;
   }

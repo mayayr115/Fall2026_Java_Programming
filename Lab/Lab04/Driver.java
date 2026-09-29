@@ -42,8 +42,11 @@ public class Driver {
     System.out.println("Average = " + gb5.averageGrade());
     System.out.println();
 
+    // Decided not to use the object names gb1 or gb2 from this point on so I can run all methods at once.
     // Test 5: Using setters
+    // gb6 in my program = gb1 in Example Program
     GradeBook gb6 = new GradeBook();
+    // gradesDouble2 in my program = gradesDouble in Example Program
     double[] gradesDouble2 = { 90.0, 80.0, 95.0, 90.0 };
     gb6.setGrades(gradesDouble2);
     System.out.println("After setting gb6 grades:");
@@ -52,21 +55,26 @@ public class Driver {
     System.out.println();
 
     // Test 6: Defensive copy test
+    // gb7 in my program = gb1 in Example Program
     GradeBook gb7 = new GradeBook();
+    // gradesDouble3 in my program = gradesDouble in Example Program
     double[] gradesDouble3 = { 90.0, 80.0, 95.0, 90.0 };
     gb7.setGrades(gradesDouble3);
     gradesDouble3[0] = 0; // Modify original array
     System.out.println("After modifying original array:");
-    System.out.println("gb7 data = " + gb7.toString()); // Should remain unchanged
+    System.out.printf("gb7 data = %s%n%n", gb7.toString()); // Should remain unchanged
 
     // Test 7: Copy constructor -- testing deep copy
+    // gb8 in my program = gb1 in Example Program
     GradeBook gb8 = new GradeBook();
     double[] gradesDouble4 = { 90.0, 80.0, 95.0, 90.0 };
+    // gradesDouble4 in my program = gradesDouble in Example Program
     gb8.setGrades(gradesDouble4);
+    // gb9 in my program = gb2 in Example Program
     GradeBook gb9 = new GradeBook(gb8);
     double[] otherGradesDouble = { 80.0, 80.0, 12.0 };
     gb9.setGrades(otherGradesDouble);
     System.out.println("After modifying gb9 grades array array:");
-    System.out.println("gb8 data = " + gb8.toString()); // Should remain unchanged
+    System.out.printf("gb8 data = %s%n%n", gb8.toString()); // Should remain unchanged
   }
 }

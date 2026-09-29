@@ -5,7 +5,7 @@ package Lab.Lab04;
 /* The program takes an input of an array of either type double, float, int or long values,
 and allows you to find the minimum and maximum values, and compute the average and mode of the array.*/
 
-public class GradeBook {
+public final class GradeBook {
   private double[] grades;
 
   // Default constructor
@@ -77,6 +77,7 @@ public class GradeBook {
   }
 
   // The Java toString() method doesn't work on arrays
+  @Override 
   public String toString() {
     String result = "[";
 

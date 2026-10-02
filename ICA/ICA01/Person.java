@@ -28,4 +28,20 @@ public class Person {
   public void changeInfo(Person person) {
     this.setInfo(person.name, person.age, person.address, person.phoneNumber);
   }
+
+  public String getName(){
+    return this.name;
+  }
+
+  public int getAge(){
+    return this.age;
+  }
+
+  public String getAddress(){
+    return this.address;
+  }
+
+  public String getPhoneNumber(){
+    return this.phoneNumber;
+  }
 }
